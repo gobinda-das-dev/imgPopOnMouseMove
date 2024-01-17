@@ -15,6 +15,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: #e7e4e5;
+    overflow: hidden;
 }
 
 nav {
