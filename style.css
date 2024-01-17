@@ -1,14 +1,41 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Libre Caslon Text', serif;
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
+    background-color: #e7e4e5;
+}
+
+nav {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 3vw;
+}
+
+nav h1 {
+    font-size: 2vw;
+    font-family: 'Pacifico', cursive;
+    line-height: 1;
+    cursor: pointer;
+}
+
+nav p {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5vw;
+    cursor: pointer;
 }
 
 #center {
@@ -17,6 +44,70 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 60%;
-    width: 60%;
-    background-color: red;
+    width: 80%;
+    z-index: 9;
+}
+
+.imgContainer {
+    position: absolute;
+    transform: translate(-50%, -97%);
+    height: 280px;
+    width: 200px;
+    overflow: hidden;
+    z-index: 8;
+}
+
+.imgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateY(100%) scale(2);
+}
+
+#center2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#center2 h1 {
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 7vw;
+    line-height: 1;
+}
+
+#center2 h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Lemon', serif;
+    font-size: 8vw;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    nav h1 {
+        font-size: 3vw;
+    }
+
+    #center2 h1 {
+        font-size: 12vw;
+        line-height: 1.2;
+    }
+    
+    #center2 h1:nth-child(2) {
+        white-space: normal;
+    }
+    
+    #center2 h2 {
+        font-size: 13vw;
+    }
 }
